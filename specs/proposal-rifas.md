@@ -37,15 +37,16 @@ Disponible ──(reservar)──▶ Reservado ──(pagar)──▶ Pagado
 ```sql
 UPDATE Boletos
 SET Estado = 'Reservado', FechaExpiracionReserva = DATEADD(MINUTE, 15, GETUTCDATE()), ...
+OUTPUT INSERTED.Id
 WHERE Id = @id AND Estado = 'Disponible';
--- Si @@ROWCOUNT = 0 → 409 Conflict
+-- Si 0 filas (result set vacío → null) → diagnosticar causa → 409 Conflict o 404
 ```
 
-- Cada transición de estado (`reservar`, `pagar`, `expiración`) usa la misma técnica: el `WHERE` incluye el estado esperado y se verifica `@@ROWCOUNT`.
-- No se lee el estado antes de escribir (evita *lost update*).
+- Cada transición de estado (`reservar`, `pagar`, `expiración`) usa la misma técnica: el `WHERE` incluye el estado esperado y se verifica la fila afectada vía `OUTPUT INSERTED.Id`.
+- No se lee el estado antes de escribir (evita *lost update*); el diagnóstico de la causa (404/409) se hace solo cuando el `UPDATE` afectó 0 filas.
 - Si se reservan boletos múltiples en una llamada: actualizar en orden de `Id` ascendente y abortar la transacción completa si algún boleto falla (rollback atómico).
 - Aislamiento recomendado: `READ COMMITTED SNAPSHOT` para que el `GET` de la grilla no bloquee escrituras.
-- Mapeo de errores: `@@ROWCOUNT = 0` porque existe el boleto → `409 Conflict` con cuerpo `{ "codigo": "BOLETO_NO_DISPONIBLE", "mensaje": "..." }`; no existe → `404 Not Found`.
+- Mapeo de errores: 0 filas porque el boleto no está `Disponible` → `409 Conflict` con cuerpo `{ "codigo": "BOLETO_NO_DISPONIBLE", "mensaje": "..." }`; rifa/boleto no existe → `404 Not Found`; rifa cerrada → `409 RIFA_CERRADA`.
 
 ## 5. Criterios de Aceptación (Given/When/Then)
 
