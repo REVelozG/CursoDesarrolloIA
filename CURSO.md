@@ -2,12 +2,14 @@
 
 ## 1. Contexto del Proyecto y Stack
 - **Ruta del Proyecto:** `C:\RVCode\CursoDesarrolloIA`
+- **Repositorio:** Sincronizado en GitHub (`main`)
 - **Herramienta Principal de IA:** OpenCode (con proveedores/APIs gratuitas)
 - **Backend:** C# / .NET 9+ / SQL Server
 - **Frontend:** React + TypeScript
 - **Metodología:** Spec-Driven Development (OpenSpec) + Agent Governance
 
 ## 2. Registro de Avance por Sesión
+- [x] Sesión 0: Setup de Repositorio Git y Estructura Inicial
 - [ ] Sesión 1: Harness Engineering & Setup en OpenCode
 - [ ] Sesión 2: Spec-Driven Development (SDD)
 - [ ] Sesión 3: SDD con OpenSpec
@@ -26,6 +28,6 @@
 - [ ] Sesión 18: Adopción y Gobernanza
 
 ## 3. Último Estado Alcanzado
-- **Última sesión completada:** Fase de Inicialización y Setup de Git.
-- **Siguiente paso:** Iniciar Sesión 1 (Configurar `AGENTS.md` y estructura de OpenCode).
-- **Archivos creados:** `.gitignore`, `CURSO.md`.
+- **Última sesión completada:** Sesión 0 (Inicialización de Git, GitHub y archivos base).
+- **Siguiente paso:** Iniciar Sesión 1 (Harness Engineering & Setup de OpenCode).
+- **Archivos creados:** `.gitignore`, `AGENTS.md`, `CURSO.md`.
