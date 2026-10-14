@@ -1,0 +1,103 @@
+# Excluir todos los archivos bin y obj
+**/[Bb]in/
+**/[Oo]bj/
+**/[Ll]og/
+
+# Excluir los archivos de salida de la compilación
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+
+# Excluir archivos de configuraciones del IDE y archivos temporales
+*.user
+*.aps
+*.pch
+*.vs
+*.vscode
+*.nupkg
+*.suo
+*.userprefs
+.vs/
+.vscode/
+[Oo]bj/
+[Bb]in/
+
+# Archivos específicos de Visual Studio para Windows Forms
+*.sdf
+*.opensdf
+*.tlog
+*.log
+*.cache
+ipch/
+*.dbmdl
+
+# Archivos de respaldo creados por Windows
+*Backup*/
+*Temp*/
+*tmp/
+
+# Excluir archivos de configuración temporal de IIS
+*.csproj.user
+*.vbproj.user
+
+# Excluir archivos de repositorios de control de versiones
+.git
+.gitattributes
+
+# Archivos temporales creados por el sistema operativo Windows
+Thumbs.db
+Desktop.ini
+
+# Archivos de la papelera de reciclaje de Windows
+$RECYCLE.BIN/
+
+# Otros archivos y carpetas a ignorar
+[Bb]in/
+[Oo]bj/
+[Tt]est[Rr]esult*
+[Tt]est[Rr]esults/
+
+# Excluir todo tipo de archivos de configuración y base de datos que podrían ser generados
+*.bak
+*.db
+*.sqlite
+*.accdb
+*.Sql
+*.mdf
+*.ndf
+
+# Archivos de paquetes y de configuración de proyectos .NET
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# .NET / C#
+bin/
+obj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Node.js / React
+node_modules/
+build/
+dist/
+.npm/
+*.log
+
+# Entornos y Llaves
+.env
+.env.local
+*.pem
+
+# Archivos de sistema operativos
+Thumbs.db
+ehthru.db
+Desktop.ini
+.DS_Store
+
+# Logs de OpenCode / Temporal
+.opencode/logs/
