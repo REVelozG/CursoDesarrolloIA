@@ -5,16 +5,16 @@
 - **Repositorio:** Sincronizado en GitHub (`main`)
 - **Herramienta Principal de IA:** OpenCode (con proveedores/APIs gratuitas)
 - **Backend:** C# / .NET 9+ / SQL Server
-- **Frontend:** React + TypeScript
+- **Frontend:** React + TypeScript + Vite
 - **Metodología:** Spec-Driven Development (OpenSpec) + Agent Governance
 
 ## 2. Registro de Avance por Sesión
 - [x] Sesión 0: Setup de Repositorio Git y Estructura Inicial
-- [ ] Sesión 1: Harness Engineering & Setup en OpenCode
-- [ ] Sesión 2: Spec-Driven Development (SDD)
-- [ ] Sesión 3: SDD con OpenSpec
-- [ ] Sesión 4: Documentation & Adversarial Review
-- [ ] Sesión 5: Agent Guardrails
+- [x] Sesión 1: Harness Engineering & Setup en OpenCode
+- [x] Sesión 2: Spec-Driven Development (SDD)
+- [x] Sesión 3: SDD con OpenSpec
+- [x] Sesión 4: Documentation & Adversarial Review
+- [x] Sesión 5: Agent Guardrails
 - [ ] Sesión 6: AI for Legacy (.NET / SQL)
 - [ ] Sesión 7: Polyrepo & API Contracts (C# <-> React)
 - [ ] Sesión 8: Evals for Agentic Harness
@@ -28,6 +28,6 @@
 - [ ] Sesión 18: Adopción y Gobernanza
 
 ## 3. Último Estado Alcanzado
-- **Última sesión completada:** Sesión 0 (Inicialización de Git, GitHub y archivos base).
-- **Siguiente paso:** Iniciar Sesión 1 (Harness Engineering & Setup de OpenCode).
-- **Archivos creados:** `.gitignore`, `AGENTS.md`, `CURSO.md`.
+- **Última sesión completada:** Sesión 5 (Agent Guardrails probados y validados con bloqueo de comandos destructivos).
+- **Siguiente paso:** Iniciar Bloque 2 - Sesión 6 (AI for Legacy: Mapeo y refactorización de código heredado en .NET y SQL).
+- **Archivos creados/configurados:** `.gitignore`, `AGENTS.md`, `CURSO.md`, `.opencode/`, `.opencode/agents/reviewer.md`, `.opencode/guardrails.md`, `specs/`.
